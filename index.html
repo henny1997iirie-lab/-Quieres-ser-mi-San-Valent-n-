@@ -37,9 +37,15 @@
       box-shadow: 0 20px 50px rgba(0,0,0,0.35);
     }
 
+    .flowers {
+      font-size: 30px;
+      margin-bottom: 18px;
+      animation: glow 2.5s ease-in-out infinite;
+    }
+
     h1 {
       font-size: 24px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     h2 {
@@ -49,15 +55,13 @@
       opacity: 0.95;
     }
 
-    .lily {
-      font-size: 28px;
-      margin-bottom: 18px;
-      animation: glow 2.5s ease-in-out infinite;
-    }
-
     .buttons {
       position: relative;
-      height: 140px;
+      height: 160px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
     }
 
     button {
@@ -68,12 +72,14 @@
       font-weight: 700;
       cursor: pointer;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
+      position: relative;
     }
 
     #yesBtn {
       background: #fff;
       color: #8a0030;
       box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+      z-index: 2;
     }
 
     #yesBtn:hover {
@@ -83,9 +89,7 @@
     #noBtn {
       background: rgba(255,255,255,0.25);
       color: #fff;
-      position: absolute;
-      right: 20px;
-      top: 70px;
+      z-index: 1;
     }
 
     .message {
@@ -136,7 +140,7 @@
   </audio>
 
   <div class="card">
-    <div class="lily">⚜️🌸⚜️</div>
+    <div class="flowers">🌷🌻🌷</div>
 
     <h1>Joyce Herrera</h1>
     <h2>¿Quieres ser mi San Valentín? 💐</h2>
@@ -147,8 +151,7 @@
     </div>
 
     <div class="message" id="message">
-      💖 Joyce, eres tan especial como un lirio.  
-      Gracias por decir que sí 💐
+      💖 Joyce, eres tan especial como una flor que ilumina mis días 🌷🌻
     </div>
   </div>
 
@@ -158,10 +161,10 @@
     const message = document.getElementById('message');
     const music = document.getElementById('music');
 
-    // Botón No escapa
+    // Botón No escapa (desde el centro)
     noBtn.addEventListener('mouseenter', () => {
-      const x = Math.random() * 200 - 100;
-      const y = Math.random() * 80 - 40;
+      const x = Math.random() * 220 - 110;
+      const y = Math.random() * 120 - 60;
       noBtn.style.transform = `translate(${x}px, ${y}px)`;
     });
 
@@ -173,11 +176,11 @@
       music.play();
     });
 
-    // Corazones y lirios flotando
+    // Corazones + flores flotando
     setInterval(() => {
       const item = document.createElement('div');
       item.classList.add('float');
-      item.innerText = Math.random() > 0.5 ? '💖' : '⚜️';
+      item.innerText = Math.random() > 0.5 ? '💖' : (Math.random() > 0.5 ? '🌷' : '🌻');
       item.style.left = Math.random() * 100 + 'vw';
       item.style.fontSize = (Math.random() * 22 + 16) + 'px';
       item.style.animationDuration = (Math.random() * 4 + 5) + 's';
