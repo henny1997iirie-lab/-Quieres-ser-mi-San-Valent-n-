@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Invitación</title>
+  <title>¿Quieres ser mi San Valentín?</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -17,87 +16,28 @@
     body {
       margin: 0;
       min-height: 100vh;
-      background: linear-gradient(135deg, #111, #222);
+      background: radial-gradient(circle at top, #ff5f8a, #b3003b);
       display: flex;
       justify-content: center;
       align-items: center;
       color: #fff;
+      overflow: hidden;
     }
 
     .card {
-      width: 100%;
-      max-width: 380px;
-      padding: 30px 25px;
-      background: rgba(255,255,255,0.05);
-      border-radius: 18px;
-      text-align: center;
+      background: rgba(255,255,255,0.15);
       backdrop-filter: blur(10px);
-    }
-
-    .avatar {
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
-      margin-bottom: 15px;
-      object-fit: cover;
-      border: 2px solid rgba(255,255,255,0.3);
+      padding: 40px 30px;
+      border-radius: 24px;
+      text-align: center;
+      width: 90%;
+      max-width: 380px;
+      animation: fadeIn 1.2s ease;
     }
 
     h1 {
-      font-size: 22px;
-      margin: 10px 0 5px;
-      font-weight: 600;
+      font-size: 26px;
+      margin-bottom: 30px;
     }
 
-    p {
-      font-size: 14px;
-      opacity: 0.8;
-      margin-bottom: 25px;
-    }
-
-    a.button {
-      display: block;
-      text-decoration: none;
-      color: #fff;
-      background: #e10600;
-      padding: 14px;
-      margin-bottom: 12px;
-      border-radius: 12px;
-      font-weight: 600;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    a.button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(225,6,0,0.4);
-    }
-
-    footer {
-      margin-top: 20px;
-      font-size: 12px;
-      opacity: 0.5;
-    }
-  </style>
-</head>
-
-<body>
-
-  <div class="card">
-    <!-- Imagen opcional -->
-    <img src="https://via.placeholder.com/150" alt="Avatar" class="avatar">
-
-    <h1>Estás invitado 🎉</h1>
-    <p>Confirma y personaliza tu asistencia</p>
-
-    <a href="#" class="button">✅ Confirmar asistencia</a>
-    <a href="#" class="button">🍽 Elegir menú</a>
-    <a href="#" class="button">📍 Ver ubicación</a>
-    <a href="#" class="button">💬 Contacto</a>
-
-    <footer>
-      © 2026 · Invitación
-    </footer>
-  </div>
-
-</body>
-</html>
+    .buttons {
